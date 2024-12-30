@@ -38,7 +38,6 @@ if (isset($_POST['confirmar'])) {
 	<meta charset="utf-8">
 	<meta http-equiv="X-UA-Compatible" content="IE=edge">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
-	<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
 	<title>BUMBA SHOP</title>
 
@@ -113,8 +112,7 @@ if (isset($_POST['confirmar'])) {
 					<!-- LOGO -->
 					<div class="col-md-3">
 						<div class="header-logo">
-							<!-- <a href="index.php" class="logo"> -->
-								<!-- <img src="./img/logo.png" alt=""> -->
+					
 								<a href="index.php">BUMBA SHOP</a>
 						</div>
 					</div>
