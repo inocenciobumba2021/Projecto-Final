@@ -1,0 +1,639 @@
+/**/
+/*--------VARIAVEIS CSS---------*/
+:root {
+	--color-primary: #ffbb55;
+	--color-danger: #ff7782;
+	--color-sucess: #41f1b6;
+	--color-warning: #ffbb55;
+	--color-white: #fff;
+	--color-info-dark: #7d8da1;
+	--color-info-light: #dce1eb;
+	--color-dark: #020a29;
+	--color-light: rgba(132, 139, 200, 0.18);
+	--color-primary-variant: #374785;
+	--color-dark-variant: #677483;
+	--color-background: #f6f6f9;
+
+
+	--card-border-radius: 2rem;
+	--border-radius-1: 0.4rem;
+	--border-radius-2: 0.8rem;
+	--border-radius-3: 1.2rem;
+	--border-radius-3: 0.2rem;
+
+	--card-padding: 1.8rem;
+	--padding-1: 1.2rem;
+	--padding-2: 0.5rem;
+	--padding-3: 0.3rem;
+
+	--box-shadow: 0 2rem 3rem var(--color-light);
+}
+
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: arial;
+	list-style: none;
+	text-decoration: none;
+	border: 0;
+	appearance: 0;
+	outline: none;
+}
+
+html {
+	font-size: 16px;
+}
+
+body {
+	width: 100vw;
+
+	font-family: poppins, sans-serif;
+	font-size: 0.88rem;
+	background: var(--color-background);
+	user-select: none;
+	overflow-x: hidden;
+	color: var(--color-dark);
+}
+
+/*===========MODAL SAIR==========*/
+.fundo-sair {
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	left: 0;
+	top: 0;
+	display: none;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	z-index: 9999;
+	background-color: rgba(0, 0, 0, .8);
+}
+
+.fundo-sair .janela-modal-sair {
+	margin: 0 auto;
+	margin-top: 15%;
+	width: 470px;
+	height: 260px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	z-index: 9999;
+	background-color: white;
+	border-radius: 5px;
+}
+
+.fundo-sair .janela-modal-sair .header-modal-sair {
+	margin-top: 2rem;
+	font-weight: bold;
+	font-size: 25px;
+
+}
+
+.fundo-sair .janela-modal-sair .btns-modal-sair {
+	width: 50%;
+	margin-top: 4rem;
+	font-weight: bold;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.fundo-sair .janela-modal-sair .btns-modal-sair form button {
+	padding: 10px;
+	width: 100px;
+	background-color: red;
+	color: #fff;
+	text-align: center;
+	border-radius: 5px;
+}
+
+.fundo-sair .janela-modal-sair .btns-modal-sair p {
+	padding: 10px;
+	width: 100px;
+	background-color: rgb(187, 9, 9);
+	color: #fff;
+	text-align: center;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.logo img {
+	width: 150px;
+	height: 110px;
+}
+
+.container {
+	overflow: hidden;
+	display: grid;
+	width: 100%;
+	height: 100vh;
+	margin: 0 auto;
+	column-gap: 2rem;
+	grid-template-columns: 18rem auto 1rem;
+}
+
+/*----------------------------HEADER ADMIN E FARMACEUTICO-------------------------------*/
+a {
+	color: var(--color-dark);
+}
+
+img {
+	display: block;
+}
+
+h1 {
+	font-weight: 800;
+	font-size: 1.8rem;
+}
+
+h2 {
+	font-size: 1.4rem;
+}
+
+h3 {
+	font-size: 0.87rem;
+}
+
+h4 {
+	font-size: 0.8rem;
+}
+
+h5 {
+	font-size: 0.77rem;
+}
+
+.foto-perfil {
+	width: 2.8rem;
+	height: 2.8rem;
+	border-radius: 50%;
+	overflow: hidden;
+}
+
+.texto-mudo {
+	color: var(--color-info-dark);
+}
+
+p {
+	color: var(--color-dark-variant);
+}
+
+.primario {
+	color: var(--color-primary);
+}
+
+.alerta {
+	color: var(--color-danger);
+}
+
+.sucesso {
+	color: var(--color-sucess);
+}
+
+.perigo {
+	color: var(--color-warning);
+}
+
+aside {
+	width: 250px;
+	height: 100%;
+	background: var(--color-dark);
+}
+
+aside .top {
+
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	padding: var(--padding-1);
+}
+
+aside .logo {
+
+	display: flex;
+	gap: 0.5rem;
+	margin-left: 30px;
+	font-size: 20px;
+	font-weight: 700;
+	color: var(--color-white);
+}
+
+aside .logo span {
+	margin-top: -5px;
+	border-radius: var(--border-radius-1);
+	padding: var(--padding-3);
+	background: white;
+	color: var(--color-sucess);
+}
+
+aside .close {
+	display: none;
+}
+
+/*===================== SIDEBAR ===================*/
+aside .sidebar {
+	display: flex;
+	flex-direction: column;
+	height: 84.5vh;
+	position: relative;
+	top: 3rem;
+
+}
+
+aside h3 {
+	font-weight: 600;
+}
+
+aside .sidebar a {
+	display: flex;
+	color: var(--color-white);
+	margin-left: 2rem;
+	gap: 1rem;
+	align-items: center;
+	position: relative;
+	height: 3.7rem;
+	transition: all 300ms ease;
+
+}
+
+aside .sidebar span {
+	margin-right: 1rem;
+	font-size: 1.6rem;
+	transition: all 300ms ease;
+}
+
+aside .sidebar a:last-child {
+	position: absolute;
+	bottom: 5em;
+	width: 87%;
+}
+
+aside .sidebar a.active {
+	background: var(--color-light);
+	color: var(--color-primary);
+	margin-left: 0;
+}
+
+aside .sidebar a.active:before {
+	content: '';
+	width: 6px;
+	height: 100%;
+	background: var(--color-primary);
+}
+
+aside .sidebar a.active span {
+	color: var(--color-primary);
+	margin-left: calc(1rem - 3px);
+}
+
+aside .sidebar a:hover {
+	color: var(--color-primary);
+}
+
+aside .sidebar a:hover span {
+	margin-left: 1rem;
+}
+
+
+/*======================DIREITA=================*/
+.direita {
+	width: 97.5%;
+	margin-top: 1rem;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.direita .top {
+	margin-right: 0;
+	display: flex;
+	justify-content: end;
+	gap: 2rem;
+}
+
+.direita .top button {
+	display: none;
+}
+
+.direita .top .perfil {
+	display: flex;
+	gap: 2rem;
+	text-align: right;
+}
+
+.direita .top .perfil .perfil-foto-e-notificacao {
+	width: 4.5rem;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.direita .top .perfil .perfil-foto-e-notificacao img {
+	width: 2rem;
+	height: 2rem;
+}
+
+form {
+	margin-top: 50px;
+	width: 50%;
+	display: flex;
+	flex-direction: column;
+}
+
+input {
+	margin: 10px auto;
+	width: 100%;
+	padding: var(--padding-2);
+	border: 1px solid #ccc;
+}
+
+select {
+	margin: 10px auto;
+	width: 100%;
+	padding: var(--padding-2);
+	border: 1px solid #ccc;
+}
+
+button {
+	margin: 10px auto;
+	width: 30%;
+	padding: var(--padding-2);
+	cursor: pointer;
+	background-color: #374785;
+	color: #fff;
+	border-radius: 3px;
+}
+
+/*================MEDIA QUERIES================*/
+/*---Tables pequenos e telefones*/
+
+@media screen and (max-width: 768px) {
+	.container {
+		width: 100%;
+		grid-template-columns: 1fr;
+	}
+
+	aside {
+		position: fixed;
+		left: -100%;
+		background: var(--color-dark);
+		width: 18rem;
+		z-index: 3;
+		box-shadow: 1rem 3rem 4rem 4rem var(--color-light);
+		height: 100vh;
+		padding-right: var(--card-padding);
+		display: none;
+		animation: mostraMenu 400ms ease forwards;
+	}
+
+	@keyframes mostraMenu {
+		to {
+			left: 0;
+		}
+	}
+
+	aside .logo {
+		margin-left: 1rem;
+	}
+
+	aside .logo h2 {
+		display: inline;
+	}
+
+	aside .sidebar h3 {
+		display: inline;
+	}
+
+	aside .sidebar a {
+		width: 100%;
+		height: 3.4rem;
+	}
+
+	aside .sidebar a:last-child {
+		position: absolute;
+		bottom: 5rem;
+	}
+
+	aside .close {
+		margin-left: 200px;
+		display: inline-block;
+		cursor: pointer;
+	}
+
+
+	main {
+		margin-top: 8rem;
+		padding: 0 1rem;
+	}
+
+
+	main .card {
+		display: grid;
+		grid-template-columns: 1fr;
+		gap: 1.6rem;
+		margin-right: 2rem;
+	}
+
+	main .vendas-recentes {
+		position: relative;
+		margin: 3rem 0 0 0;
+		width: 100%;
+	}
+
+	main .vendas-recentes table {
+		width: 100%;
+		margin: 0;
+	}
+
+	.direita {
+		width: 94%;
+		margin: 0 auto 4rem;
+	}
+
+	.direita .top {
+		position: fixed;
+		top: 0;
+		left: 0;
+		align-items: center;
+		padding: 0 0.8rem;
+		height: 4.6rem;
+		background: var(--color-white);
+		width: 100%;
+		margin: 0;
+		z-index: 2;
+		box-shadow: 0 1rem 1rem var(--color-light);
+	}
+
+	.direita .top .perfil .perfil-foto img {
+		width: 2rem;
+		height: 2rem;
+		margin-right: 0;
+	}
+
+	.direita .top .tema-toggler {
+		width: 4.4rem;
+		position: absolute;
+		left: 66%;
+	}
+
+	.direita .perfil .info {
+		display: none;
+	}
+
+	.direita .top button {
+		display: inline-block;
+		background: transparent;
+		cursor: pointer;
+		color: var(--color-dark);
+		position: absolute;
+		left: 1rem;
+	}
+
+	.direita .top button span {
+		font-size: 2rem;
+	}
+
+	.direita .atualizacoes-recentes .atualizacoes {
+		width: 91vw;
+		height: 77vh;
+		background: var(--color-white);
+		padding: var(--card-padding);
+		border-radius: var(--card-border-radius);
+		box-shadow: var(--box-shadow);
+		transition: all 300ms ease;
+	}
+}
+
+/*---Tables pequenos e telefones*/
+
+@media screen and (max-width: 760px) {
+	.container {
+		width: 100%;
+		grid-template-columns: 1fr;
+	}
+
+	aside {
+		position: fixed;
+		left: -100%;
+		background: var(--color-dark);
+		width: 18rem;
+		z-index: 3;
+		box-shadow: 1rem 3rem 4rem 4rem var(--color-light);
+		height: 100vh;
+		padding-right: var(--card-padding);
+		display: none;
+		animation: mostraMenu 400ms ease forwards;
+	}
+
+	@keyframes mostraMenu {
+		to {
+			left: 0;
+		}
+	}
+
+	aside .logo {
+		margin-left: 1rem;
+	}
+
+	aside .logo h2 {
+		display: inline;
+	}
+
+	aside .sidebar h3 {
+		display: inline;
+	}
+
+	aside .sidebar a {
+		width: 100%;
+		height: 3.4rem;
+	}
+
+	aside .sidebar a:last-child {
+		position: absolute;
+		bottom: 5rem;
+	}
+
+	aside .close {
+		margin-left: 200px;
+		display: inline-block;
+		cursor: pointer;
+	}
+
+	main {
+		margin-top: 8rem;
+		padding: 0 1rem;
+	}
+
+	main .vendas-recentes {
+		position: relative;
+		margin: 3rem 0 0 0;
+		width: 100%;
+	}
+
+	main .vendas-recentes table {
+		width: 100%;
+		margin: 0;
+	}
+
+	.direita {
+		width: 94%;
+		margin: 0 auto 4rem;
+	}
+
+	.direita .top {
+		position: fixed;
+		top: 0;
+		left: 0;
+		align-items: center;
+		padding: 0 0.8rem;
+		height: 4.6rem;
+		background: var(--color-white);
+		width: 100%;
+		margin: 0;
+		z-index: 2;
+		box-shadow: 0 1rem 1rem var(--color-light);
+	}
+
+	.direita .top .perfil .perfil-foto img {
+		width: 2rem;
+		height: 2rem;
+		margin-right: 0;
+	}
+
+	.direita .top .tema-toggler {
+		width: 4.4rem;
+		position: absolute;
+		left: 66%;
+	}
+
+	.direita .perfil .info {
+		display: none;
+	}
+
+	.direita .top button {
+		display: inline-block;
+		background: transparent;
+		cursor: pointer;
+		color: var(--color-dark);
+		position: absolute;
+		left: 1rem;
+	}
+
+	.direita .top button span {
+		font-size: 2rem;
+	}
+
+	.direita .atualizacoes-recentes .atualizacoes {
+		width: 91vw;
+		height: 77vh;
+		background: var(--color-white);
+		padding: var(--card-padding);
+		border-radius: var(--card-border-radius);
+		box-shadow: var(--box-shadow);
+		transition: all 300ms ease;
+	}
+}
